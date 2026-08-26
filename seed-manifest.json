@@ -1,0 +1,130 @@
+{
+  "schema": "pramaan/provider-update-demo-seed/v1",
+  "repository": {
+    "owner": "Pramaan-Dev",
+    "name": "provider-update-demo-npm-stack",
+    "remote": "https://github.com/Pramaan-Dev/provider-update-demo-npm-stack.git",
+    "baseRef": "main",
+    "headPattern": "product-loop/live-demo-*"
+  },
+  "persona": {
+    "name": "Relay API",
+    "summary": "Webhook relay internals for an internal API service; pure transformation planning that never binds ports or sends traffic."
+  },
+  "baseline": {
+    "dependencies": {
+      "@biomejs/biome": "1.9.4",
+      "@types/express": "4.17.21",
+      "@types/lodash": "4.17.13",
+      "@types/node": "22.10.2",
+      "axios": "1.7.9",
+      "dayjs": "1.11.10",
+      "express": "4.21.2",
+      "lodash": "4.17.20",
+      "typescript": "5.6.3",
+      "zod": "3.23.8"
+    },
+    "node": "24.18.0",
+    "packageManager": "pnpm@11.15.1",
+    "verificationCommand": "pnpm test",
+    "testPaths": [
+      "tests/hmac-envelope.test.ts",
+      "tests/payload-schema.test.ts",
+      "tests/replay-window.test.ts",
+      "tests/relay-routes.test.ts",
+      "tests/webhook-dispatcher.test.ts"
+    ]
+  },
+  "expectedUpdate": {
+    "change": "npm-stack-refresh-v1",
+    "kind": "general-maintenance-uplift",
+    "targetRequirements": {
+      "@biomejs/biome": ">=2.5.10 <3.0.0",
+      "@types/express": ">=5.0.6 <6.0.0",
+      "@types/lodash": ">=4.17.25 <5.0.0",
+      "@types/node": ">=26.3.0 <27.0.0",
+      "axios": ">=1.20.0 <2.0.0",
+      "dayjs": ">=1.11.23 <2.0.0",
+      "express": ">=5.2.1 <6.0.0",
+      "lodash": ">=4.18.1 <5.0.0",
+      "typescript": ">=7.0.2 <8.0.0",
+      "zod": ">=4.4.3 <5.0.0"
+    },
+    "affectedPaths": ["src/dispatch/webhook-dispatcher.ts", "src/routes/relay-routes.ts"],
+    "automaticPatchPaths": ["package.json"],
+    "manualVerificationPaths": [
+      "pnpm-lock.yaml",
+      "tests/relay-routes.test.ts",
+      "tests/support/express.ts",
+      "tests/webhook-dispatcher.test.ts"
+    ],
+    "untouchedPaths": [
+      "src/schema/payload-schema.ts",
+      "src/signing/hmac-envelope.ts",
+      "src/time/windowing.ts"
+    ],
+    "outdatedInventory": [
+      {
+        "category": "toolchain",
+        "dependency": "@biomejs/biome",
+        "pinned": "1.9.4",
+        "suggestedTarget": ">=2.5.10 <3.0.0"
+      },
+      {
+        "category": "types",
+        "dependency": "@types/express",
+        "pinned": "4.17.21",
+        "suggestedTarget": ">=5.0.6 <6.0.0"
+      },
+      {
+        "category": "types",
+        "dependency": "@types/lodash",
+        "pinned": "4.17.13",
+        "suggestedTarget": ">=4.17.25 <5.0.0"
+      },
+      {
+        "category": "types",
+        "dependency": "@types/node",
+        "pinned": "22.10.2",
+        "suggestedTarget": ">=26.3.0 <27.0.0"
+      },
+      {
+        "category": "runtime",
+        "dependency": "axios",
+        "pinned": "1.7.9",
+        "suggestedTarget": ">=1.20.0 <2.0.0"
+      },
+      {
+        "category": "runtime",
+        "dependency": "dayjs",
+        "pinned": "1.11.10",
+        "suggestedTarget": ">=1.11.23 <2.0.0"
+      },
+      {
+        "category": "runtime",
+        "dependency": "express",
+        "pinned": "4.21.2",
+        "suggestedTarget": ">=5.2.1 <6.0.0"
+      },
+      {
+        "category": "runtime",
+        "dependency": "lodash",
+        "pinned": "4.17.20",
+        "suggestedTarget": ">=4.18.1 <5.0.0"
+      },
+      {
+        "category": "toolchain",
+        "dependency": "typescript",
+        "pinned": "5.6.3",
+        "suggestedTarget": ">=7.0.2 <8.0.0"
+      },
+      {
+        "category": "runtime",
+        "dependency": "zod",
+        "pinned": "3.23.8",
+        "suggestedTarget": ">=4.4.3 <5.0.0"
+      }
+    ],
+    "inventoryNote": "outdatedInventory is informational scan output only: none of these packages belong to a known provider pack, so an update run should classify them as unknown-package inventory."
+  }
+}

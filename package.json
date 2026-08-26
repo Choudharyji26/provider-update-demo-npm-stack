@@ -1,0 +1,20 @@
+{
+  "name": "provider-update-demo-npm-stack",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/express": "4.17.21",
+    "@types/lodash": "4.17.13",
+    "@types/node": "22.10.2",
+    "axios": "1.7.9",
+    "dayjs": "1.11.10",
+    "express": "4.21.2",
+    "lodash": "4.17.20",
+    "typescript": "5.6.3",
+    "zod": "3.23.8"
+  },
+  "scripts": {
+    "test": "node scripts/verify.mjs"
+  }
+}
