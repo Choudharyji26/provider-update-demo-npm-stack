@@ -41,7 +41,7 @@ verification tools is pinned alongside runtime packages in `dependencies`; `.too
 | --- | --- | --- | --- |
 | @biomejs/biome | 1.9.4 | >=2.5.10 <3.0.0 | toolchain |
 | @types/express | 4.17.21 | >=5.0.6 <6.0.0 | types |
-| @types/lodash | 4.17.13 | >=4.17.25 <5.0.0 | types |
+| @types/lodash | 4.17.14 | >=4.17.25 <5.0.0 | types |
 | @types/node | 22.10.2 | >=26.3.0 <27.0.0 | types |
 | axios | 1.7.9 | >=1.20.0 <2.0.0 | runtime |
 | dayjs | 1.11.10 | >=1.11.23 <2.0.0 | runtime |
