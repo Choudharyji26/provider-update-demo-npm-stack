@@ -5,7 +5,7 @@
   "dependencies": {
     "@biomejs/biome": "1.9.4",
     "@types/express": "4.17.21",
-    "@types/lodash": "4.17.13",
+    "@types/lodash": "4.17.14",
     "@types/node": "22.10.2",
     "axios": "1.7.9",
     "dayjs": "1.11.10",
