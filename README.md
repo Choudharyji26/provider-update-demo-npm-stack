@@ -86,3 +86,5 @@ Suggested protected-main and `product-loop/live-demo-*` branch rules are documen
 `docs/repository-rules.md`. They allow a later authorized Product Loop run to create a new demo
 branch without changing `main`. This seed does not push, create a remote branch, open a pull
 request, register an App, use a key, contact a provider, merge, or deploy.
+
+Acceptance G5: pushed while the review bot was switched off.
